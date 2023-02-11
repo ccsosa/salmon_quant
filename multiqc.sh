@@ -8,5 +8,5 @@
 ##SBATCH --nodelist=node15
 
 module load lang/python/3.9.7
-multiqc /users/ccsosaa/workdir/ --ignore "/users/ccsosaa/workdir/tmp/" "/users/ccsosaa/workdir/trim_galore/" "/users/ccsosaa/workdir/fastqc/" --outdir /users/ccsosaa/workdir/multiqc/ 
+multiqc /users/ccsosaa/workdir/ --ignore "/users/ccsosaa/workdir/tmp" --ignore "/users/ccsosaa/workdir/trim_galore" --ignore "/users/ccsosaa/workdir/fastqc" --outdir /users/ccsosaa/workdir/multiqc
 
