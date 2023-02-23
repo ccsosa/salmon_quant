@@ -9,12 +9,11 @@
 
 module load salmon/1.9.0
 
-for i in *_1_trimmed.fq.gz
+for i in *_1_trimmed_nonrrna.fq.gz
 do
-   n=${i%%_1_trimmed.fq.gz} # strip part of file name
+   n=${i%%_1_trimmed_nonrrna.fq.gz} # strip part of file name
 
    salmon quant -i /users/ccsosaa/data/salmon_index/salmon_index \
    --libType A -o /users/ccsosaa/workdir/salmon/${n}\
-   --seqBias --gcBias --validateMappings \
-   -r ${n}_1_trimmed.fq.gz
+   -r ${n}_1_trimmed_nonrrna.fq.gz --softclip  --validateMappings --seqBias --gcBias --minScoreFraction 0.6
 done

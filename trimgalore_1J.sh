@@ -12,6 +12,6 @@ for f in *_1.fq.gz;# for each sample
 
 do
 	n=${f%%_1.fq.gz} # strip part of file name
-    	trim_galore -q 30 --paired --gzip -o /users/ccsosaa/workdir/trim_galore/ \
+    	trim_galore --paired --gzip -o /users/ccsosaa/workdir/trim_galore/ \
 	${n}_1.fq.gz ${n}_2.fq.gz
 done

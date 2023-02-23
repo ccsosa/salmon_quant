@@ -7,6 +7,5 @@
 #SBATCH --partition=FULL
 ##SBATCH --nodelist=node15
 
-module load salmon
-time salmon index -t  /users/ccsosaa/data/transcriptome/gentrome.fa -d /users/ccsosaa/data/transcriptome/decoys.txt -p 12 -i salmon_index --gencode
- 
+module load salmon/1.9.0
+time salmon index -t  /users/ccsosaa/data/transcriptome/gentrome.fa -d /users/ccsosaa/data/transcriptome/decoys.txt -p 12 -i salmon_index --gencode  --kmerLen 17
