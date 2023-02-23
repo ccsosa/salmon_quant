@@ -17,7 +17,21 @@ Do the following steps:
 - 2.) Run fastqc to observe sequence quality (fastqc_1.sh or fastqc_1J.sh for single and paired reads respectively)
 - 3.) Run Trimgalore to remove adapters and polyA tails (trimgalore_1.sh or trimgalore_1J.sh for single and paired reads respectively)
 - 4.) Run fastqc again to observe sequence quality after trimming.(fastqc_2.sh)
+- 4.1) optional: Run Ribodetector to reduce the rRNA contamination (ribodetector_single.sh or ribodetector_1J.sh for single and paired reads respectively)
+- 4.2) optional: Run fastqc to see effects of ribodetector (fastqc_3.sh)
+-4.1) optional: Run sortmerna to reduce the rRNA contamination (sortmerna_single.sh)
 - 5.) Run Salmon quantification step(salmon_quant_single.sh or salmon_quant.sh for single and paired reads respectively)
 - 6.) Run multiqc to summarize all steps in one HTML report (multiqc.sh)
+
+#R codes:
+
+- 1.) Run edgeR_func_QL_combined_chunks.R to do edgeR pairwise comparison with the salmon counts
+- 2.) Run gene_intersects.R to get upset plots and see genes overlap among contrasts for Up and downregulated genes
+- 3.) Run compile_topGO.R to summarize topGO results
+- 4.) Run Join_files.R to obtain core and pan stress contrasts  genes and Log2 fold change and TPM z-normalized heatmaps for exploration. Also, this scripts subset files to use with vHRR 
+- 5.) Run CO_NET2.R to obtain a co-expression network analysis, modules and the graph to be read in Cytoscape
+
+
+
 
 
