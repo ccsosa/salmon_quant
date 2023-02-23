@@ -24,7 +24,7 @@ Do the following steps:
 - 6.) Run multiqc to summarize all steps in one HTML report (multiqc.sh)
 
 #R codes:
-
+- 0.) Download goa files from plaza
 - 1.) Run edgeR_func_QL_combined_chunks.R to do edgeR pairwise comparison with the salmon counts
 - 2.) Run gene_intersects.R to get upset plots and see genes overlap among contrasts for Up and downregulated genes
 - 3.) Run compile_topGO.R to summarize topGO results
