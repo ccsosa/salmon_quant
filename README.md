@@ -1,5 +1,5 @@
-# salmon_quant
-These are bash files to run salmon quantification and multiqc
+# Salmon quantification for iOmicas server and DEG using edgeR
+These are bash files to run salmon quantification and multiqc as well R DEG using edgeR
 
 ##Steps to run decoy aware salmon index
 ```
@@ -13,7 +13,13 @@ cat IRGSP-1.0_cds_2022-09-01.fasta IRGSP-1.0_genome.fasta > gentrome.fa
 - Linux server (more than 200 GB of RAM is suggested)
 - SLURM
 
+# Requirements for DEG
+- Define groups with at least two samples!
+- read: https://github.com/ccsosa/edgeR_nf-core-rnaseq
+- Probably you need to do DEG locally 
+
 ### Programs used
+-SRA toolkit
 - trim_galore
 - Python and the modules multiqc and ribodetector
 - fastqc
@@ -35,7 +41,7 @@ Do the following steps:
 - 5.) Run Salmon quantification step(salmon_quant_single.sh or salmon_quant.sh for single and paired reads respectively)
 - 6.) Run multiqc to summarize all steps in one HTML report (multiqc.sh)
 
-#R codes:
+# R codes:
 - 0.) Download goa files from plaza
 - 1.) Run edgeR_func_QL_combined_chunks.R to do edgeR pairwise comparison with the salmon counts
 - 2.) Run gene_intersects.R to get upset plots and see genes overlap among contrasts for Up and downregulated genes
