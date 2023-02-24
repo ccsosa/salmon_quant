@@ -12,7 +12,10 @@ cat IRGSP-1.0_cds_2022-09-01.fasta IRGSP-1.0_genome.fasta > gentrome.fa
 # System requirements:
 - Linux server (more than 200 GB of RAM is suggested)
 - SLURM
-- Create a folder with the following structure
+- Create a folder with the following structure:
+
+![tree_fig](https://github.com/ccsosa/salmon_quant/blob/main/Screenshot_2.jpg)
+> Download sortmerna fasta files (see: https://sortmerna.readthedocs.io/en/latest/)
 
 # Requirements for DEG
 - Define groups with at least two samples!
