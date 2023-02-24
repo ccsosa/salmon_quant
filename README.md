@@ -23,7 +23,7 @@ cat IRGSP-1.0_cds_2022-09-01.fasta IRGSP-1.0_genome.fasta > gentrome.fa
 - Probably you need to do DEG locally 
 
 ### Programs used
--SRA toolkit
+- SRA toolkit
 - trim_galore
 - Python and the modules multiqc and ribodetector
 - fastqc
