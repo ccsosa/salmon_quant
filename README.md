@@ -9,6 +9,18 @@ sed -i.bak -e 's/>//g' decoys.txt
 cat IRGSP-1.0_cds_2022-09-01.fasta IRGSP-1.0_genome.fasta > gentrome.fa
 ```
 
+# System requirements:
+- Linux server (more than 200 GB of RAM is suggested)
+- SLURM
+
+### Programs used
+- trim_galore
+- Python and the modules multiqc and ribodetector
+- fastqc
+- sortmerna
+- salmon
+- R
+
 # Description:
 
 Do the following steps:
@@ -19,7 +31,7 @@ Do the following steps:
 - 4.) Run fastqc again to observe sequence quality after trimming.(fastqc_2.sh)
 - 4.1) optional: Run Ribodetector to reduce the rRNA contamination (ribodetector_single.sh or ribodetector_1J.sh for single and paired reads respectively)
 - 4.2) optional: Run fastqc to see effects of ribodetector (fastqc_3.sh)
--4.1) optional: Run sortmerna to reduce the rRNA contamination (sortmerna_single.sh)
+-4.1) optional: Run sortmerna to reduce the rRNA contamination (sortmerna_single.sh or sortmerna_1J.sh  for single and paired reads respectively)
 - 5.) Run Salmon quantification step(salmon_quant_single.sh or salmon_quant.sh for single and paired reads respectively)
 - 6.) Run multiqc to summarize all steps in one HTML report (multiqc.sh)
 
@@ -30,8 +42,6 @@ Do the following steps:
 - 3.) Run compile_topGO.R to summarize topGO results
 - 4.) Run Join_files.R to obtain core and pan stress contrasts  genes and Log2 fold change and TPM z-normalized heatmaps for exploration. Also, this scripts subset files to use with vHRR 
 - 5.) Run CO_NET2.R to obtain a co-expression network analysis, modules and the graph to be read in Cytoscape
-
-
 
 
 
