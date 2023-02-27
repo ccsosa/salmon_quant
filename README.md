@@ -6,9 +6,8 @@ These are bash files to run salmon quantification and multiqc as well R DEG usin
 #https://combine-lab.github.io/alevin-tutorial/2019/selective-alignment/
 grep "^>" < IRGSP-1.0_genome.fasta | cut -d " " -f 1 > decoys.txt
 sed -i.bak -e 's/>//g' decoys.txt
-cat IRGSP-1.0_cds_2022-09-01.fasta IRGSP-1.0_genome.fasta > gentrome.fa
+cat IRGSP-1.0_transcript_2022-09-01.fasta IRGSP-1.0_genome.fasta > gentrome.fa
 ```
-
 # System requirements:
 - Linux server (more than 200 GB of RAM is suggested)
 - SLURM
